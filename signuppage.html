@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NEW USER SIGNUP PAGE</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+        <!-- <script src="signup.js"></script> -->
+</head>
+<body style="text-align: center; background-image:url('https://wallpaperaccess.com/full/19849.jpg');background-size: cover;">
+    <header style="background-color:black; width:100%; height: 50px;text-align: center;">
+        <h2 style="color: white;text-align:center;padding: 12px;">Sign up Page</h2>
+    </header>
+    <div style="border:2px solid white ; padding: 10px; width:400px;text-align:left;height:220px; margin:20px;margin-left: 35%;">
+        <form onsubmit="onSubmit(event)" id="myForm" method="post" style="display:block;">
+            <label for="name" style="color:white">Name</label>
+            <input   type="text" id="name" name="name"required title="Enter your name" style="margin:4px; width: 90%;"><br>
+            <label for="emailid" style="color:white">EmailID</lable>
+            <input  type="email" id="emailid" name="emailid" required title="Enter your EmailID" style="margin:4px; width: 90%"><br>
+            <label for="password" style="color:white">Create Password</label>
+            <input type="password" id="password" name="password" required title="Create Password" style="margin:4px; width: 90%"><br>
+            <label for="telephonenumber" style="color:white">Enter Phone Number</label> 
+            <input type="number" id="telephonenumber" name="telephonenumber" required style="margin:4px; width: 90%">
+            <div style="text-align: center;">
+                
+                <button type="submit" id="btn" style="background-color:white; color:black; border-color:white;border-radius:3px;margin: 4px;">SIGNUP</button><br><br>
+            </div>
+           
+            </form>
+            <div style="text-align: center;">
+                <button style="background-color: white;border-color: black; border-radius: 3px;"><a style="color:black;text-decoration: none;"href="./login.html">Existing User-login</a></button>
+
+            </div>
+            
+
+    </div>
+   
+        <!-- <button style="background-color: green;border-color: green; border-radius: 3px;"><a style="color: yellow;text-decoration: none;"href="./login.html">Existing User-login</a></button> -->
+
+        
+        
+
+    
+    
+</body>
+    
+</html>
