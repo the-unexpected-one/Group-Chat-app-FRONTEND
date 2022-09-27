@@ -1,26 +1,30 @@
 window.addEventListener("DOMContentLoaded",()=>{
     console.log('123')
-axios.get("http://localhost:8000/message")
-.then(response=>{
-const messageList=document.getElementById('messages');
-console.log(messageList)
-const res=response.data;
-console.log(res.length)
+    setInterval(()=>{
+        axios.get("http://localhost:8000/message").then(response=>{
+            const messageList=document.getElementById('messages');
+            messageList.innerHTML=''
+            console.log(messageList)
+            const res=response.data;
+            console.log(res.length)
+            
+            for(let i=0;i<res.length;i++){
+                const name=res[i].name;
+            const message=res[i].message;
+            
+                const list=document.createElement('li');
+                list.innerHTML=`${name}-${message}`
+                console.log(list);
+            
+                messageList.appendChild(list)
+            }
+            }).catch(err=>{
+                console.log(err)
+            })
+            },1000)
+            
+    })
 
-for(let i=0;i<res.length;i++){
-    const name=res[i].name;
-const message=res[i].message;
-
-    const list=document.createElement('li');
-    list.innerHTML=`${name}-${message}`
-    console.log(list);
-
-    messageList.appendChild(list)
-}
-}).catch(err=>{
-    console.log(err)
-})
-})
 
 
 function storemessage(event){
