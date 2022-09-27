@@ -13,6 +13,7 @@ function login(event){
         alert(res.data.message)
         const token=res.data.token;
         localStorage.setItem('token',token);
+        location.replace('./chatapp.html')
 
         // location.replace('/addexpense.html')
         console.log(res)
