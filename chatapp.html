@@ -4,16 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group Chat App</title>
+   
+        <title >Group Chat App</title>
+    
+    
     
 </head>
 <body>
-    <header><h1>Chat App</h1></header>
-    <ul id="messages"></ul>
-<form onsubmit="storemessage(event)"> 
-    <footer><input type="text" id="inputmessage" title="Enter Message">
-        <button type="submit">Send</button></footer>
-</form>
+    
+    <header><h1 style="text-align: center;">Chat App</h1>
+        <div style="float: right;"> 
+            <button><a href="./group.html" >Create New Group</a></button></header>
+        </div>
+    <div>
+        <h3 style="margin-left: 20px;">Group list </h3>
+        <ul id="groups" style="float:left; list-style-type:none"></ul>
+    </div>
+   
+    <div style="border:2px solid black ;width:50%;margin-left:400px;text-align:center">
+        <ul  id="messages" style="list-style-type: none;"></ul>
+    </div>
+    
+<div>
+    <form onsubmit="storemessage(event)" style="position:fixed;bottom:30px;margin-left: 35%;"> 
+        <footer><input type="text" id="inputmessage" title="Enter Message" style="width:200%">
+            <button type="submit" style="margin: 2px;">Send</button>
+        </footer>
+    </form>
+</div>
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
 <script src="./chatapp.js"></script>
 </body>
