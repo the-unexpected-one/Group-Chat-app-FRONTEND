@@ -111,14 +111,17 @@ function getgroupchats(groupid){
     const token=localStorage.getItem('token')
     axios.get(`http://localhost:8000/getgroupchats/${groupid}`,{headers: {'Authorization':token}})
     .then(res=>{
-        console.log(res)
-        response=res.data;
-        const messagelist=document.getElementById('messages')
-        messagelist.innerHTML='';
-        localStorage.removeItem('mymessages')
-        for(let i=0;i<response.length;i++){
-            printMessageOnScreen(response.name,response.message)
+        if(res.data!=null){
+            console.log(res)
+            response=res.data;
+            const messagelist=document.getElementById('messages')
+            messagelist.innerHTML='';
+            localStorage.removeItem('mymessages')
+            for(let i=0;i<response.length;i++){
+                printMessageOnScreen(response.name,response.message)
+            }
         }
+       
     }).catch(err=>{
         console.log(err)
     })
